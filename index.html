@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eshal Khan - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+      background: linear-gradient(90deg, #fff, #aaa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .btn-resume {
+      padding: 8px 16px;
+      background: #61dafb;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 80px 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .quote {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    section {
+      margin: 40px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 10px #111;
+    }
+
+    h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #eee;
+    }
+
+    ul {
+      list-style-type: "✦ ";
+      padding-left: 20px;
+    }
+
+    a {
+      color: #61dafb;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .hero {
+        padding: 40px 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EK</div>
+    <nav>
+      <a href="#about">👩‍💻 About</a>
+      <a href="#education">🎓 Education</a>
+      <a href="#projects">📁 Projects</a>
+      <a href="#skills">🎯 Skills</a>
+
+
+      <a href="#contact">📞 Contact</a>
+    </nav>
+    <a class="btn-resume" href="resume.pdf" download>📄 Download Resume</a>
+  </header>
+
+  <div class="hero">
+    <h1><span id="typing"></span><span class="cursor">|</span></h1>
+    <p class="quote">“Code your future. Dream in logic. Win with passion.”</p>
+  </div>
+
+  <section id="about">
+    <h2>👩‍💻 About Me</h2>
+    <p>I am an enthusiastic AI student with a strong passion for technology, innovation, and sports. Through my internship, I gained hands-on experience in web development, 3D printing, electronics, and graphic design.</p>
+    <p>I love working on creative and tech-based projects and am also a certified athlete and hockey player — blending discipline and creativity. Always eager to learn, collaborate, and make an impact.</p>
+  </section>
+
+  <section id="education">
+  <h2>🎓 Education</h2>
+  <ul>
+    <li><strong>Matriculation ( Science)</strong> – The Peace Group Of School And Colleges</li>
+    <li><strong>Intermediate (Pre-Engineering)</strong> – Jinnah College For Women University Of Peshawar</li>
+    <li><strong>Currently:</strong> Pursuing Bachelor's in Artificial Intelligence in Institute Of Management Sciences</li>
+  </ul>
+</section>
+
+
+  <section id="projects">
+    <h2>📁 Projects</h2>
+    <ul>
+      <li>🍽️ Recipe Generator in C++</li>
+      <li>🎭 Roast Me Generator</li>
+      <li>🏥 Hospital Management System</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>🎯 Skills</h2>
+    <ul>
+      <li>Web Development (HTML, CSS), C++</li>
+      <li>Graphic Designing (Canva), Video Editing (CapCut)</li>
+      <li>Public Speaking, Event Planning</li>
+      <li>Creativity, Leadership, Team Collaboration</li>
+    </ul>
+  </section>
+  
+
+
+  <section id="contact">
+    <h2>📞 Contact</h2>
+    <p>Email: ek132062@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/eshal-khan-2a2935332/" target="_blank">linkedin.com/in/eshal-khan</a></p>
+  </section>
+
+  <script>
+    const text = "Hi, I'm Eshal Khan 👋";
+    const typingElement = document.getElementById("typing");
+    const cursor = document.querySelector(".cursor");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      } else {
+        cursor.style.display = "none";
+      }
+    }
+
+    type();
+  </script>
+
+</body>
+</html>
